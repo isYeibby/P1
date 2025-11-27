@@ -22,3 +22,9 @@ exports.getProductoById = (req, res) => {
         }
     });
 }
+
+exports.createProducto = (req, res) => {
+    const nuevoProducto = req.body;
+    const { nombre, descripcion } = nuevoProducto;
+    res.json({ nombre, descripcion });
+};

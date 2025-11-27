@@ -3,6 +3,7 @@ const sqlite3 = require('sqlite3').verbose();
 const productosRouter = require('./routes/productos');
 
 const app = express();
+app.use(express.json());
 const db = new sqlite3.Database('./database.sqlite');
 
 app.use('/api/productos', productosRouter);
